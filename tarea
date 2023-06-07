@@ -1,0 +1,650 @@
+{
+	"info": {
+		"_postman_id": "98fc0a54-6e47-4981-8f28-a3bfd1d6454f",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27610806"
+	},
+	"item": [
+		{
+			"name": "1- Testear el servicio de normalizaciòn de direcciones este funcionando",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicios.usig.buenosaires.gob.ar/normalizar",
+					"protocol": "https",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. a. Testear dirección sin parámetros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=\n",
+					"protocol": "https",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar",
+						""
+					],
+					"query": [
+						{
+							"key": "direccion",
+							"value": "\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. b1 Testear dirección con un parámetro de entrada",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=loria\n",
+					"protocol": "https",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar",
+						""
+					],
+					"query": [
+						{
+							"key": "direccion",
+							"value": "loria\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. b2 Testear dirección con un parámetro de entrada",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=helguera 500\n",
+					"protocol": "https",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar",
+						""
+					],
+					"query": [
+						{
+							"key": "direccion",
+							"value": "helguera 500\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. b3 Testear dirección con un parámetro de entrada",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=av%20medrano%20y%20av%20rivadavia",
+					"protocol": "https",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar",
+						""
+					],
+					"query": [
+						{
+							"key": "direccion",
+							"value": "av%20medrano%20y%20av%20rivadavia"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.c1 Testear dirección con parámetros no numericos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=!",
+					"protocol": "https",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar",
+						""
+					],
+					"query": [
+						{
+							"key": "direccion",
+							"value": "!"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.c2 Testear dirección con parámetros no numericos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=# ",
+					"protocol": "https",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar",
+						""
+					],
+					"query": [
+						{
+							"key": "direccion",
+							"value": ""
+						}
+					],
+					"hash": " "
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.c3 Testear dirección con parámetros no numericos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=&\n",
+					"protocol": "https",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar",
+						""
+					],
+					"query": [
+						{
+							"key": "direccion",
+							"value": ""
+						},
+						{
+							"key": "\n",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.c4 Testear dirección con parámetros numericos incorrectos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=1234\n",
+					"protocol": "https",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar",
+						""
+					],
+					"query": [
+						{
+							"key": "direccion",
+							"value": "1234\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.c5 Testear dirección con parámetros numericos incorrectos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=10000000000000000",
+					"protocol": "https",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar",
+						""
+					],
+					"query": [
+						{
+							"key": "direccion",
+							"value": "10000000000000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.c6 Testear dirección con parámetros incorrectos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=eeeeeee",
+					"protocol": "https",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar",
+						""
+					],
+					"query": [
+						{
+							"key": "direccion",
+							"value": "eeeeeee"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.c7 Testear dirección con parámetros incorrectos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=5.2 ",
+					"protocol": "https",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar",
+						""
+					],
+					"query": [
+						{
+							"key": "direccion",
+							"value": "5.2 "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4- Testear Programa con tres o más parámetros de entrada",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=mario bravo y rivadavia,caba",
+					"protocol": "http",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar",
+						""
+					],
+					"query": [
+						{
+							"key": "direccion",
+							"value": "mario bravo y rivadavia,caba"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.e3 Testear dirección incluyendo el partido",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=puan%20105,%20Moron",
+					"protocol": "https",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar",
+						""
+					],
+					"query": [
+						{
+							"key": "direccion",
+							"value": "puan%20105,%20Moron"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.d2 Testear dirección incluyendo el partido",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=olimpo%20&partido=Lomas%20de%20Zamora",
+					"protocol": "https",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar",
+						""
+					],
+					"query": [
+						{
+							"key": "direccion",
+							"value": "olimpo%20"
+						},
+						{
+							"key": "partido",
+							"value": "Lomas%20de%20Zamora"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.e1 Testear dirección incluyendo el partido incorrecto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=puan%20105,%20Moron1234   ",
+					"protocol": "https",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar",
+						""
+					],
+					"query": [
+						{
+							"key": "direccion",
+							"value": "puan%20105,%20Moron1234   "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.e2 Testear dirección incluyendo el partido incorrecto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=helguera%20,%20florencio%20varela",
+					"protocol": "https",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar",
+						""
+					],
+					"query": [
+						{
+							"key": "direccion",
+							"value": "helguera%20,%20florencio%20varela"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3-a1 Testear dirección con dos o más parámetros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=san%20pedrito%20y%20rivadavia%20y%20",
+					"protocol": "https",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar",
+						""
+					],
+					"query": [
+						{
+							"key": "direccion",
+							"value": "san%20pedrito%20y%20rivadavia%20y%20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3-a2 Testear dirección con dos o más parámetros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=100%20y%20100 ",
+					"protocol": "https",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar",
+						""
+					],
+					"query": [
+						{
+							"key": "direccion",
+							"value": "100%20y%20100 "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3-a3 Testear dirección con dos o más parámetros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=san%20pedrito%20y%20rivadavia",
+					"protocol": "https",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar",
+						""
+					],
+					"query": [
+						{
+							"key": "direccion",
+							"value": "san%20pedrito%20y%20rivadavia"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4-a1 Testear Programa con tres o más parámetros de entrada",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=medrano y diaz velez,caba",
+					"protocol": "http",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar",
+						""
+					],
+					"query": [
+						{
+							"key": "direccion",
+							"value": "medrano y diaz velez,caba"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4-a2 Testear Programa con tres o más parámetros de entrada",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=san%20pedrito%20y%20rivadavia",
+					"protocol": "https",
+					"host": [
+						"servicios",
+						"usig",
+						"buenosaires",
+						"gob",
+						"ar"
+					],
+					"path": [
+						"normalizar",
+						""
+					],
+					"query": [
+						{
+							"key": "direccion",
+							"value": "san%20pedrito%20y%20rivadavia"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
